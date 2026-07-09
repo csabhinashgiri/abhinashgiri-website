@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Supporting businesses with corporate law, governance, capital markets and regulatory advisory through every stage of growth.">
+<title>Abhinash Giri &amp; Co. | Company Secretaries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1e38;
+    --navy-mid: #1a2f52;
+    --navy-light: #243d6a;
+    --gold: #b8922a;
+    --gold-light: #d4aa55;
+    --gold-pale: #f5edd8;
+    --cream: #faf8f3;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-mid: #444444;
+    --text-light: #777777;
+    --rule: #d4aa5540;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-logo-sub {
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a9ab8;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #8a9ab8;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-links a:focus-visible,
+  .nav-logo:focus-visible,
+  .hamburger:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 4px;
+  }
+
+  .nav-cta {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gold-light) !important;
+    border: 1px solid var(--gold);
+    padding: 0.45em 1.1em;
+    transition: background 0.2s, color 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--white) !important;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { display: none; }
+  section.active { display: block; }
+
+  /* ─── HERO ─── */
+  #home {
+    background: var(--navy);
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: 68px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #home.active { display: flex; }
+
+  .hero-bg-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 120px,
+        rgba(184,146,42,0.04) 120px,
+        rgba(184,146,42,0.04) 121px
+      );
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    padding: 0 10vw;
+    max-width: 1100px;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #8a9ab8;
+    max-width: 540px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85em 2em;
+    background: var(--gold);
+    color: var(--white);
+    border: 1px solid var(--gold);
+    transition: background 0.2s;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+  .btn-outline {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85em 2em;
+    border: 1px solid #4a5a7a;
+    color: #8a9ab8;
+    transition: border-color 0.2s, color 0.2s;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  .hero-credentials {
+    position: absolute;
+    bottom: 3rem;
+    right: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-end;
+  }
+
+  .cred-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #4a5a7a;
+    border: 1px solid #2a3a5a;
+    padding: 0.35em 0.8em;
+  }
+
+  /* ─── INNER PAGES ─── */
+  .page-header {
+    background: var(--navy);
+    padding: 120px 10vw 60px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .page-eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .page-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  /* ─── SERVICES PAGE ─── */
+  .services-body {
+    background: var(--cream);
+    padding: 80px 10vw;
+  }
+
+  .service-block {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    padding: 3rem 3.5rem;
+    margin-bottom: 2px;
+  }
+
+  .service-block:last-child { margin-bottom: 0; }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .service-desc {
+    color: var(--text-mid);
+    font-size: 0.93rem;
+    line-height: 1.85;
+    max-width: 700px;
+    margin-bottom: 1.75rem;
+    text-align: justify;
+  }
+
+  .service-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.6rem;
+    list-style: none;
+  }
+
+  .service-items li {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    padding: 0.5rem 0.75rem;
+    background: var(--cream);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .service-items li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ─── ABOUT PAGE ─── */
+  .about-body {
+    background: var(--white);
+    padding: 80px 10vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.55;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .about-body-text {
+    font-size: 0.93rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  .about-section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 2rem 0 0.75rem;
+    line-height: 1.25;
+  }
+
+  .about-section-title:first-child { margin-top: 0; }
+
+  .about-sidebar {
+    padding-top: 0.25rem;
+  }
+
+  .sidebar-card {
+    border: 1px solid #e8e0d0;
+    padding: 2rem 1.75rem;
+    margin-bottom: 1.5rem;
+    background: var(--cream);
+  }
+
+  .sidebar-card-title {
+    font-size: 0.64rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e8e0d0;
+  }
+
+  .sidebar-list {
+    list-style: none;
+    font-size: 0.83rem;
+    color: var(--text-mid);
+    line-height: 2;
+  }
+
+  .sidebar-list li { display: flex; align-items: flex-start; gap: 0.5rem; }
+  .sidebar-list li::before { content: '·'; color: var(--gold); font-size: 1.1rem; line-height: 1.6; flex-shrink: 0; }
+
+  /* ─── CONTACT PAGE ─── */
+  .contact-body {
+    background: var(--cream);
+    padding: 80px 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-info-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .contact-info-text {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+  }
+
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-item-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-item-val {
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+
+  .contact-item-val a {
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .contact-item-val a:hover { color: var(--gold); }
+
+  .contact-form {
+    background: var(--white);
+    padding: 3rem;
+    border-top: 3px solid var(--gold);
+  }
+
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 2rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .form-input, .form-select, .form-textarea {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.88rem;
+    color: var(--text);
+    background: var(--cream);
+    border: 1px solid #ddd;
+    padding: 0.75em 1em;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--gold);
+  }
+
+  .form-textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.9em 2.5em;
+    background: var(--navy);
+    color: var(--white);
+    border: 1px solid var(--navy);
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover { background: var(--navy-light); border-color: var(--navy-light); }
+
+  .form-success {
+    display: none;
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    color: #2a6a3a;
+    background: #edf7f0;
+    border: 1px solid #b8d8c0;
+    padding: 0.75em 1em;
+  }
+
+  .confidentiality-notice {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.76rem;
+    color: var(--text-light);
+    line-height: 1.75;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    text-align: justify;
+  }
+
+  /* ─── CAREERS PAGE ─── */
+  .careers-body {
+    background: var(--white);
+    padding: 80px 10vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .careers-intro {
+    font-size: 0.93rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+    max-width: 720px;
+    margin-bottom: 4rem;
+    text-align: justify;
+  }
+
+  .careers-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5vw;
+  }
+
+  .careers-main {}
+
+  .careers-block {
+    border-left: 3px solid var(--gold);
+    padding: 2.25rem 2.5rem;
+    background: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .careers-block:last-child { margin-bottom: 0; }
+
+  .careers-block-label {
+    font-size: 0.64rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.85rem;
+  }
+
+  .careers-block-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .careers-block-text {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    text-align: justify;
+  }
+
+  .careers-block-text a {
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .careers-block-text a:hover { color: var(--gold); }
+
+  .careers-sidebar {
+    padding-top: 0.25rem;
+  }
+
+  .careers-cta-card {
+    background: var(--navy);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .careers-cta-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .careers-cta-card-text {
+    font-size: 0.82rem;
+    color: #8a9ab8;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .btn-careers {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85em 1.75em;
+    background: var(--gold);
+    color: var(--white);
+    border: 1px solid var(--gold);
+    transition: background 0.2s;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    align-self: center;
+  }
+
+  .btn-careers:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+  @media (max-width: 768px) {
+    .careers-grid { grid-template-columns: 1fr; }
+    .careers-body { padding: 56px 6vw; }
+    .careers-block { padding: 1.75rem 1.5rem; }
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    padding: 3rem 10vw;
+    border-top: 1px solid #2a3a5a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .footer-brand span {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    color: #4a5a7a;
+    margin-top: 0.2rem;
+  }
+
+  .footer-copy {
+    font-size: 0.7rem;
+    color: #4a5a7a;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4a5a7a;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold-light); }
+
+  /* ─── MOBILE ─── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: transparent;
+    border: 0;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #8a9ab8;
+    transition: 0.2s;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 6vw; }
+    .hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--navy);
+      padding: 0.75rem 6vw 1rem;
+      border-bottom: 1px solid #2a3a5a;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      width: 100%;
+      padding: 0.95rem 0;
+    }
+    .nav-links .nav-cta {
+      display: inline-block;
+      width: auto;
+      margin-top: 0.4rem;
+      padding: 0.75em 1.15em;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+    .about-body { grid-template-columns: 1fr; }
+    .contact-body { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-credentials { display: none; }
+    .service-block { padding: 2rem 1.5rem; }
+    .contact-form { padding: 2rem 1.5rem; }
+    .services-body,
+    .about-body,
+    .contact-body { padding: 56px 6vw; }
+    .page-header { padding: 108px 6vw 48px; }
+    .hero-content { padding: 0 6vw; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .btn-primary,
+    .btn-outline { width: 100%; text-align: center; }
+    footer { padding: 2.5rem 6vw; align-items: flex-start; flex-direction: column; }
+    .footer-links { flex-wrap: wrap; gap: 1rem 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    nav { height: 64px; }
+    #home { padding-top: 64px; }
+    .nav-links { top: 64px; }
+    .nav-logo-name { font-size: 0.95rem; letter-spacing: 0.09em; }
+    .nav-logo-sub { font-size: 0.55rem; letter-spacing: 0.16em; }
+    .hero-headline { font-size: 2.55rem; }
+    .service-items { grid-template-columns: 1fr; }
+    .page-header { padding-top: 100px; }
+  }
+
+  /* ─── MOBILE GENERAL FIXES (Fix 6 & 7) ─── */
+  /* Prevent horizontal scroll */
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  /* Ensure form elements are fully tappable and not blocked on mobile */
+  @media (max-width: 768px) {
+    .form-input,
+    .form-select,
+    .form-textarea {
+      font-size: 16px; /* prevents iOS auto-zoom */
+      -webkit-appearance: none;
+      appearance: none;
+      touch-action: manipulation;
+    }
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23777' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1em center;
+      padding-right: 2.5em;
+    }
+    .form-submit {
+      width: 100%;
+      touch-action: manipulation;
+      cursor: pointer;
+    }
+    .btn-careers {
+      display: block;
+      text-align: center;
+      touch-action: manipulation;
+      align-self: stretch;
+    }
+    /* Prevent hero-bg-lines from blocking taps */
+    .hero-bg-lines {
+      pointer-events: none;
+    }
+  }
+
+  /* ─── DISCLAIMER MODAL ─── */
+  html.disclaimer-lock,
+  html.disclaimer-lock body {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .disclaimer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6vw;
+  }
+
+  .disclaimer-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 120px,
+        rgba(184,146,42,0.04) 120px,
+        rgba(184,146,42,0.04) 121px
+      );
+    pointer-events: none;
+  }
+
+  .disclaimer-panel {
+    position: relative;
+    max-width: 640px;
+    width: 100%;
+    max-height: 86vh;
+    overflow-y: auto;
+    border: 1px solid var(--rule);
+    background: var(--navy-mid);
+    padding: 3.5rem 3rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  }
+
+  .disclaimer-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .disclaimer-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .disclaimer-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .disclaimer-body p {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: #8a9ab8;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .disclaimer-body p:last-child {
+    margin-bottom: 2.5rem;
+  }
+
+  .disclaimer-actions {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .disclaimer-panel { padding: 2.5rem 1.5rem; max-height: 90vh; }
+    .disclaimer-actions { flex-direction: column; align-items: stretch; }
+    .disclaimer-actions .btn-primary,
+    .disclaimer-actions .btn-outline { width: 100%; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .disclaimer-heading { font-size: 1.7rem; }
+    .disclaimer-panel { padding: 2.25rem 1.25rem; }
+  }
+
+  /* ─── FLOATING BUTTONS (moved from body: <style> is not valid as body content) ─── */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    width: 54px;
+    height: 54px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .wa-float:hover {
+    background: #1ebe5d;
+    transform: scale(1.07);
+  }
+  .call-float {
+    position: fixed;
+    bottom: 98px;
+    right: 28px;
+    z-index: 999;
+    width: 54px;
+    height: 54px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .call-float:hover {
+    background: var(--navy-light);
+    transform: scale(1.07);
+  }
+  @media (max-width: 768px) {
+    .call-float {
+      bottom: 84px;
+      right: 18px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .wa-float {
+      bottom: 20px;
+      right: 18px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── MANDATORY DISCLAIMER ─── -->
+<div class="disclaimer-overlay" id="disclaimer-overlay" role="dialog" aria-modal="true" aria-labelledby="disclaimer-heading" aria-describedby="disclaimer-desc">
+  <div class="disclaimer-panel">
+    <div class="disclaimer-eyebrow">Important Notice</div>
+    <h2 class="disclaimer-heading" id="disclaimer-heading">DISCLAIMER</h2>
+    <div class="disclaimer-body" id="disclaimer-desc">
+      <p>Company Secretaries in Practice are not allowed to solicit clients or Professional work or advertise, according to The Company Secretaries Regulations, 1982:-</p>
+      <p>• By clicking the "I Agree" button, you acknowledge and confirm that you are independently looking for information about our firm i.e. Abhinash Giri &amp; Co. and that no advertisements, personal communications, solicitations, invitations, or other forms of inducement of any kind have been made by or on behalf of our firm or its proprietor to solicit work through this website.</p>
+      <p>The contents or claims contained on this website are the sole and exclusive responsibility of Abhinash Giri &amp; Co. The Institute of Company Secretaries of India does not own any responsibility whatsoever for such contents or claims made by Abhinash Giri &amp; Co.</p>
+    </div>
+    <div class="disclaimer-actions">
+      <button type="button" class="btn-primary" id="disclaimer-agree">I Agree</button>
+      <button type="button" class="btn-outline" id="disclaimer-exit">Exit Site</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function() {
+    var STORAGE_KEY = 'agco_disclaimer_accepted';
+    var overlay = document.getElementById('disclaimer-overlay');
+    if (!overlay) return;
+
+    var alreadyAccepted = false;
+    try {
+      alreadyAccepted = sessionStorage.getItem(STORAGE_KEY) === 'true';
+    } catch (e) {
+      alreadyAccepted = false;
+    }
+
+    if (alreadyAccepted) {
+      overlay.parentNode.removeChild(overlay);
+      return;
+    }
+
+    document.documentElement.classList.add('disclaimer-lock');
+
+    var agreeBtn = document.getElementById('disclaimer-agree');
+    var exitBtn  = document.getElementById('disclaimer-exit');
+
+    // Hide background page content from screen readers while the modal is open
+    // (keyboard focus was already trapped below; this also removes background
+    // content from the accessibility tree, per standard modal dialog practice).
+    function setBackgroundHidden(hidden) {
+      Array.prototype.forEach.call(document.body.children, function(el) {
+        if (el === overlay) return;
+        if (hidden) { el.setAttribute('aria-hidden', 'true'); }
+        else { el.removeAttribute('aria-hidden'); }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { setBackgroundHidden(true); });
+    } else {
+      setBackgroundHidden(true);
+    }
+
+    function acceptDisclaimer() {
+      try { sessionStorage.setItem(STORAGE_KEY, 'true'); } catch (e) {}
+      document.documentElement.classList.remove('disclaimer-lock');
+      setBackgroundHidden(false);
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    }
+
+    function exitSite() {
+      window.close();
+      setTimeout(function() {
+        window.location.href = 'about:blank';
+      }, 300);
+    }
+
+    agreeBtn.addEventListener('click', acceptDisclaimer);
+    exitBtn.addEventListener('click', exitSite);
+
+    // Block Escape key from having any dismiss effect
+    document.addEventListener('keydown', function(e) {
+      if (!document.body.contains(overlay)) return;
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+
+    // Simple focus trap between the two buttons while the disclaimer is open
+    overlay.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === agreeBtn) {
+        e.preventDefault();
+        exitBtn.focus();
+      } else if (!e.shiftKey && document.activeElement === exitBtn) {
+        e.preventDefault();
+        agreeBtn.focus();
+      }
+    });
+
+    agreeBtn.focus();
+  })();
+</script>
+
+<nav>
+  <a class="nav-logo" href="#home" onclick="showSection('home'); return false;">
+    <span class="nav-logo-name">Abhinash Giri &amp; Co.</span>
+    <span class="nav-logo-sub">Company Secretaries</span>
+  </a>
+  <ul class="nav-links" id="primary-navigation">
+    <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+    <li><a href="#services" onclick="showSection('services'); return false;">Services</a></li>
+    <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+    <li><a href="#careers" onclick="showSection('careers'); return false;">Careers</a></li>
+    <li><a href="#contact" onclick="showSection('contact'); return false;" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" type="button" onclick="toggleMobileMenu()" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HOME ─── -->
+<section id="home" class="active">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Across India</div>
+    <h1 class="hero-headline">
+      Governance, Compliance<br>
+      &amp; <em>Capital Markets</em><br>
+      Advisory
+    </h1>
+    <p class="hero-sub">
+      Supporting businesses with corporate law, governance, capital markets and regulatory advisory through every stage of growth.
+    </p>
+    <div class="hero-actions">
+      <button type="button" class="btn-primary" onclick="showSection('services')">Our Services</button>
+      <button type="button" class="btn-outline" onclick="showSection('contact')">Get in Touch</button>
+    </div>
+  </div>
+  <div class="hero-credentials">
+    <div class="cred-badge">CORPORATE LAW AND GOVERNANCE</div>
+    <div class="cred-badge">REGULATORY AND CAPITAL MARKETS</div>
+    <div class="cred-badge">SERVING CLIENTS ACROSS INDIA</div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="page-header">
+    <div class="page-eyebrow">What We Do</div>
+    <h2 class="page-title">Services</h2>
+  </div>
+
+  <div class="services-body">
+    <div class="service-block">
+      <div class="service-num">01</div>
+      <h3 class="service-title">Capital Markets &amp; IPO Advisory</h3>
+      <p class="service-desc">
+        Our firm advises companies, promoters and stakeholders on capital markets transactions and corporate fund raising initiatives. Our support spans transaction structuring, regulatory compliance, due diligence, documentation, investor-related initiatives and execution support, helping clients navigate complex transactions with clarity and confidence.
+      </p>
+      <ul class="service-items">
+        <li>Fund Raising &amp; Deal Structuring</li>
+        <li>Pre-IPO Structuring &amp; Compliance</li>
+        <li>IPO Advisory &amp; Execution Support</li>
+        <li>Rights Issue Advisory &amp; Execution</li>
+        <li>Buyback Advisory &amp; Execution</li>
+        <li>Preferential Issue Advisory &amp; Execution</li>
+        <li>Qualified Institutional Placement (QIP)</li>
+        <li>Due Diligence &amp; Search Report</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-num">02</div>
+      <h3 class="service-title">Listed Company Advisory</h3>
+      <p class="service-desc">
+        Listed companies operate within a dynamic regulatory environment that demands strong governance, timely disclosures and disciplined compliance. Our firm works alongside promoters, boards and management teams to provide practical advisory support across the listed company lifecycle.
+      </p>
+      <ul class="service-items">
+        <li>SME to Mainboard Migration</li>
+        <li>Takeover &amp; Open Offer support</li>
+        <li>Promoter Reclassification Support</li>
+        <li>Direct Listing</li>
+        <li>Secretarial Audit &amp; Certification</li>
+        <li>Listing Regulations Compliance Support</li>
+        <li>Board &amp; Committee Advisory</li>
+        <li>Insider Trading (PIT) Compliance &amp; Advisory</li>
+        <li>Shareholder Meetings &amp; Postal Ballot</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-num">03</div>
+      <h3 class="service-title">Fund Raising &amp; Strategic Transaction Advisory</h3>
+      <p class="service-desc">
+        Supporting startups, MSMEs, unlisted companies, promoters and investors through fundraising initiatives, shareholder transactions and strategic corporate actions. Our firm advises on equity and debt fundraising, investment rounds, private placements and growth capital transactions, combining legal, regulatory and transaction execution expertise to help structure, negotiate and implement transactions with commercial focus and regulatory clarity.
+      </p>
+      <ul class="service-items">
+        <li>Equity &amp; Debt Fund Raising</li>
+        <li>Early-Stage / Growth Capital / Pre-IPO Fundraising</li>
+        <li>Mergers &amp; Acquisitions</li>
+        <li>Investor Identification &amp; Introductions</li>
+        <li>Private Equity &amp; Venture Capital Connect</li>
+        <li>Strategic Transaction Structuring</li>
+        <li>Acquirer &amp; Target Identification Support</li>
+        <li>Buy &amp; Sell-Side Transaction Support</li>
+        <li>Deal Negotiation Support</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-num">04</div>
+      <h3 class="service-title">Secretarial &amp; Regulatory Services</h3>
+      <p class="service-desc">
+        Supporting businesses with corporate secretarial, regulatory and representation requirements across their lifecycle. Our firm assists clients in navigating statutory obligations, regulatory approvals, adjudication proceedings and tribunal-related matters under various legal and regulatory frameworks, with a focus on practical solutions and effective representation.
+      </p>
+      <ul class="service-items">
+        <li>MCA Filings &amp; Regulatory Approvals</li>
+        <li>Company Incorporation &amp; Business Set-up</li>
+        <li>NCLT, NCLAT &amp; SAT Representations</li>
+        <li>Oppression &amp; Mismanagement Matters</li>
+        <li>Class Action &amp; Shareholder Disputes</li>
+        <li>Compounding and Adjudication</li>
+        <li>FEMA, FDI &amp; ODI Advisory</li>
+        <li>Inbound &amp; Outbound Investment Transactions</li>
+        <li>GST Regulatory Compliance</li>
+        <li>FSSAI License &amp; Compliance</li>
+        <li>Sectoral Regulatory Compliance</li>
+        <li>Labour Law Compliance</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-num">05</div>
+      <h3 class="service-title">Corporate Governance &amp; Restructuring</h3>
+      <p class="service-desc">
+        Advisory support for businesses undertaking governance enhancements, ownership restructuring, employee ownership initiatives and corporate reorganisations. Our firm assists promoters, boards and management teams in designing compliant structures, implementing strategic changes and navigating approval processes with regulatory clarity and practical execution support.
+      </p>
+      <ul class="service-items">
+        <li>Corporate Governance Reviews</li>
+        <li>Governance Framework Development</li>
+        <li>Board Evaluation &amp; Governance Support</li>
+        <li>ESOP Structuring &amp; Documentation</li>
+        <li>Promoter &amp; Group Structuring</li>
+        <li>Capital Restructuring Advisory</li>
+        <li>Policy &amp; Charter Documentation</li>
+        <li>Succession &amp; Ownership Planning</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Abhinash Giri &amp; Co.<span>Company Secretaries</span></div>
+    <ul class="footer-links">
+      <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+      <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+      <li><a href="#careers" onclick="showSection('careers'); return false;">Careers</a></li>
+      <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; Abhinash Giri &amp; Co. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="page-header">
+    <div class="page-eyebrow">Who we are</div>
+    <h2 class="page-title">About</h2>
+  </div>
+
+  <div class="about-body">
+    <div class="about-main">
+      <h3 class="about-section-title">About Us</h3>
+      <p class="about-body-text">
+        Abhinash Giri &amp; Co. is a firm of Company Secretaries advising businesses, promoters, investors and management teams on corporate law, governance, regulatory compliance and capital markets matters. Our firm supports clients across the entire corporate lifecycle, including business incorporation, structuring, governance, compliance, private funding, mergers, acquisitions, takeovers, public offerings and listing-related matters, ongoing corporate and securities law compliance, strategic transactions and other corporate restructuring processes.
+      </p>
+      <p class="about-body-text">
+        The firm was established to provide practical and commercially focused advisory, assisting clients in navigating an increasingly complex legal and regulatory environment. The practice is shaped by the founder's professional experience across company secretarial practice and capital markets assignments, enabling clients to benefit from both regulatory expertise and an understanding of transaction execution, stakeholder expectations and corporate decision-making.
+      </p>
+
+      <h3 class="about-section-title">Our Values</h3>
+      <p class="about-body-text">
+        Our firm places emphasis on integrity, precision, confidentiality, responsiveness, and long-term professional relationships. Each engagement is approached with attention to statutory detail, commercial context, and the governance standards expected in professional practice.
+      </p>
+
+      <h3 class="about-section-title">Professional Background</h3>
+      <p class="about-body-text">
+        Our firm is led by CS Abhinash Giri, whose professional experience spans investment banking, corporate secretarial advisory, capital markets transactions, listed company compliance, regulatory matters etc. This experience forms the foundation of the practical guidance and execution support provided by the firm to its clients.
+      </p>
+
+      <h3 class="about-section-title">Service Coverage</h3>
+      <p class="about-body-text">
+        Our firm supports businesses across various stages of growth, from privately held companies to listed entities, by providing advisory services on corporate law, governance, regulatory matters and capital markets transactions. The firm combines technical knowledge with practical execution support in assisting clients with regulatory requirements.
+      </p>
+    </div>
+
+    <div class="about-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Our Approach</div>
+        <ul class="sidebar-list">
+          <li>Practical Advice</li>
+          <li>Result-Oriented Support</li>
+          <li>Responsive Execution</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Core Values</div>
+        <ul class="sidebar-list">
+          <li>Integrity</li>
+          <li>Precision</li>
+          <li>Confidentiality</li>
+          <li>Responsiveness</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Advisory Coverage</div>
+        <ul class="sidebar-list">
+          <li>Capital Markets &amp; IPO Advisory</li>
+          <li>Listed Company Advisory</li>
+          <li>Fund Raising &amp; Strategic Transactions</li>
+          <li>Secretarial &amp; Regulatory Services</li>
+          <li>Corporate Governance &amp; Restructuring</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Presence</div>
+        <ul class="sidebar-list">
+          <li>Kolkata, West Bengal</li>
+          <li>Serving clients across India</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Abhinash Giri &amp; Co.<span>Company Secretaries</span></div>
+    <ul class="footer-links">
+      <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+      <li><a href="#services" onclick="showSection('services'); return false;">Services</a></li>
+      <li><a href="#careers" onclick="showSection('careers'); return false;">Careers</a></li>
+      <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; Abhinash Giri &amp; Co. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="page-header">
+    <div class="page-eyebrow">Reach Out</div>
+    <h2 class="page-title">Contact</h2>
+  </div>
+
+  <div class="contact-body">
+    <div class="contact-info">
+      <h3 class="contact-info-title">Discuss Your Requirements</h3>
+      <p class="contact-info-text">
+        Whether you are planning a fund raise, preparing for a capital markets transaction, seeking support with your day-to-day governance and compliance requirements, evaluating a strategic restructuring, or looking for a long-term advisory partner for your business, we would welcome the opportunity to discuss your objectives and explore how we may assist.
+      </p>
+
+      <div class="contact-detail">
+        <div>
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-val">Kolkata, West Bengal</div>
+        </div>
+        <div>
+          <div class="contact-item-label">Service Coverage</div>
+          <div class="contact-item-val">Serving Clients Across India</div>
+        </div>
+        <div>
+          <div class="contact-item-label">Contact No.</div>
+          <div class="contact-item-val">+91 98048 64660</div>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-val"><a href="mailto:abhinash@abhinashgiri.com">abhinash@abhinashgiri.com</a></div>
+        </div>
+        <div>
+          <div class="contact-item-label">LinkedIn</div>
+          <div class="contact-item-val"><a href="https://www.linkedin.com/in/csabhinash/" target="_blank" rel="noopener">LinkedIn Profile</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="form-title">Send an Enquiry</div>
+      <form id="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="cf-name">Name</label>
+            <input id="cf-name" type="text" name="name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-org">Organisation</label>
+            <input id="cf-org" type="text" name="organisation" class="form-input" placeholder="Company / Firm">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-phone">Phone</label>
+            <input id="cf-phone" type="tel" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-enquiry">Nature of Enquiry</label>
+          <select id="cf-enquiry" name="enquiry_type" class="form-select" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Capital Markets &amp; IPO Advisory</option>
+            <option>Listed Company Advisory</option>
+            <option>Fund Raising &amp; Strategic Transaction Advisory</option>
+            <option>Secretarial &amp; Regulatory Services</option>
+            <option>Corporate Governance &amp; Restructuring</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-desc">Brief Description</label>
+          <textarea id="cf-desc" name="description" class="form-textarea" placeholder="Please describe your requirement briefly…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Submit Enquiry</button>
+        <div class="form-success" id="form-success">
+          Thank you — we will respond within one business day.
+        </div>
+      </form>
+      <p class="confidentiality-notice">Confidentiality Notice: While we welcome initial enquiries through the enquiry form, email or WhatsApp, we recommend that highly confidential, sensitive or commercially privileged information be shared only through appropriate channels after initial discussions.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Abhinash Giri &amp; Co.<span>Company Secretaries</span></div>
+    <ul class="footer-links">
+      <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+      <li><a href="#services" onclick="showSection('services'); return false;">Services</a></li>
+      <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+      <li><a href="#careers" onclick="showSection('careers'); return false;">Careers</a></li>
+    </ul>
+    <p class="footer-copy">&copy; Abhinash Giri &amp; Co. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ─── CAREERS ─── -->
+<section id="careers">
+  <div class="page-header">
+    <div class="page-eyebrow">Join Us</div>
+    <h2 class="page-title">Careers</h2>
+  </div>
+
+  <div class="careers-body">
+    <p class="careers-intro">
+      We believe that strong professional relationships are built before opportunities arise. Accordingly, we welcome applications from talented professionals whose experience, interests and values align with our firm's areas of practice. We are always pleased to connect with individuals who are committed to excellence, integrity and continuous professional development.
+    </p>
+
+    <div class="careers-grid">
+      <div class="careers-main">
+        <div class="careers-block">
+          <div class="careers-block-label">01 &mdash; Opportunities</div>
+          <h3 class="careers-block-title">Current Opportunities</h3>
+          <p class="careers-block-text">
+            We welcome applications from CS or CA (semi qualified or qualified), MBA graduates and other professionals interested in contributing to and growing within our practice areas.
+          </p>
+        </div>
+
+        <div class="careers-block">
+          <div class="careers-block-label">02 &mdash; Training</div>
+          <h3 class="careers-block-title">Internships</h3>
+          <p class="careers-block-text">
+            We welcome applications for CS Management Training, summer internships and other internship opportunities from students and trainees seeking practical professional exposure.
+          </p>
+        </div>
+
+        <div class="careers-block">
+          <div class="careers-block-label">03 &mdash; Reach Out</div>
+          <h3 class="careers-block-title">Applications</h3>
+          <p class="careers-block-text">
+            Interested candidates may send their resume to <a href="mailto:abhinash@abhinashgiri.com">abhinash@abhinashgiri.com</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="careers-sidebar">
+        <div class="careers-cta-card">
+          <div class="careers-cta-card-title">Send Your Resume</div>
+          <p class="careers-cta-card-text">
+            We review all applications and will be in touch if there is a suitable opening or engagement opportunity.
+          </p>
+          <a href="mailto:abhinash@abhinashgiri.com?subject=Career%20Application" class="btn-careers">Send Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Abhinash Giri &amp; Co.<span>Company Secretaries</span></div>
+    <ul class="footer-links">
+      <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+      <li><a href="#services" onclick="showSection('services'); return false;">Services</a></li>
+      <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+      <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; Abhinash Giri &amp; Co. All rights reserved.</p>
+  </footer>
+</section>
+
+<script>
+  var VALID_SECTIONS = ['home', 'services', 'about', 'contact', 'careers'];
+
+  function showSection(id, pushState) {
+    var validId = VALID_SECTIONS.indexOf(id) !== -1 ? id : 'home';
+    var target = document.getElementById(validId);
+    if (!target) return;
+
+    document.querySelectorAll('section').forEach(function(section) {
+      section.classList.remove('active');
+    });
+    target.classList.add('active');
+    closeMobileMenu();
+    window.scrollTo(0, 0);
+
+    if (pushState !== false) {
+      history.pushState({ section: validId }, '', '#' + validId);
+    }
+  }
+
+  function getHashSection() {
+    var hash = window.location.hash.replace('#', '');
+    return VALID_SECTIONS.indexOf(hash) !== -1 ? hash : 'home';
+  }
+
+  // Handle browser back / forward
+  window.addEventListener('popstate', function(e) {
+    var id = (e.state && e.state.section) ? e.state.section : getHashSection();
+    showSection(id, false);
+  });
+
+  // On load, navigate to the hash section (or home)
+  (function() {
+    var id = getHashSection();
+    showSection(id, false);
+    history.replaceState({ section: id }, '', '#' + id);
+  })();
+
+  // Fix 1: mailto-based form submission (no backend, no Formspree)
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+    var name     = (document.getElementById('cf-name').value   || '').trim();
+    var org      = (document.getElementById('cf-org').value    || '').trim();
+    var email    = (document.getElementById('cf-email').value  || '').trim();
+    var phone    = (document.getElementById('cf-phone').value  || '').trim();
+    var enquiry  = (document.getElementById('cf-enquiry').value|| '').trim();
+    var desc     = (document.getElementById('cf-desc').value   || '').trim();
+
+    // Build subject
+    var subjectParts = [];
+    if (name)    subjectParts.push(name);
+    if (org)     subjectParts.push(org);
+    if (enquiry) subjectParts.push(enquiry);
+    var subject = 'Enquiry: ' + subjectParts.join(' | ');
+
+    // Build body
+    var body = [
+      'Name: ' + (name || '—'),
+      'Organisation: ' + (org || '—'),
+      'Email: ' + (email || '—'),
+      'Phone: ' + (phone || '—'),
+      'Nature of Enquiry: ' + (enquiry || '—'),
+      '',
+      'Brief Description:',
+      desc || '—'
+    ].join('\n');
+
+    var mailtoLink = 'mailto:abhinash@abhinashgiri.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body='    + encodeURIComponent(body);
+
+    window.location.href = mailtoLink;
+  }
+
+  function toggleMobileMenu() {
+    var links  = document.getElementById('primary-navigation');
+    var button = document.querySelector('.hamburger');
+    if (!links || !button) return;
+
+    var isOpen = links.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  function closeMobileMenu() {
+    var links  = document.getElementById('primary-navigation');
+    var button = document.querySelector('.hamburger');
+    if (!links || !button) return;
+
+    links.classList.remove('open');
+    button.setAttribute('aria-expanded', 'false');
+  }
+</script>
+<!-- ─── CALL FLOATING BUTTON ─── -->
+<a
+  href="tel:+919804864660"
+  class="call-float"
+  aria-label="Call Us"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z"/>
+  </svg>
+</a>
+
+<!-- ─── WHATSAPP FLOATING BUTTON ─── -->
+<a
+  href="https://wa.me/919804864660?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20professional%20requirement."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="wa-float"
+  aria-label="Chat on WhatsApp"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.473 2.027 7.775L0 32l8.489-2.001A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.258 13.258 0 01-6.788-1.867l-.487-.289-5.039 1.188 1.214-4.895-.317-.502A13.3 13.3 0 012.667 16C2.667 8.637 8.637 2.667 16 2.667S29.333 8.637 29.333 16 23.363 29.333 16 29.333zm7.27-9.96c-.399-.2-2.362-1.165-2.728-1.299-.366-.133-.633-.2-.9.2-.266.399-1.032 1.299-1.266 1.565-.233.267-.466.3-.865.1-.399-.2-1.685-.621-3.21-1.978-1.186-1.057-1.987-2.363-2.22-2.762-.233-.399-.025-.615.175-.814.18-.179.399-.466.598-.699.2-.233.267-.399.4-.665.133-.267.067-.5-.033-.699-.1-.2-.9-2.164-1.232-2.963-.325-.778-.655-.673-.9-.685-.233-.012-.5-.015-.766-.015-.267 0-.699.1-1.065.5-.366.399-1.398 1.365-1.398 3.33 0 1.964 1.432 3.863 1.632 4.13.2.266 2.82 4.305 6.832 6.034.955.412 1.7.659 2.281.843.958.305 1.831.262 2.52.159.769-.114 2.362-.966 2.695-1.899.333-.933.333-1.732.233-1.899-.1-.166-.366-.266-.765-.466z"/>
+  </svg>
+</a>
+
+</body>
+</html>
