@@ -1,0 +1,15 @@
+# Abhinash Giri & Co., Company Secretaries
+
+> Practicing Company Secretaries firm based in Kolkata, West Bengal, India, providing corporate law, governance, capital markets and regulatory advisory. This site is informational only. Under The Company Secretaries Regulations, 1982, the firm does not solicit clients or professional work.
+
+## Pages
+
+- [Home](https://abhinashgiri.com/#home): Overview of the firm
+- [Services](https://abhinashgiri.com/#services): Capital Markets and IPO Advisory, Listed Company Advisory, Fund Raising and Strategic Transaction Advisory, Secretarial and Regulatory Services, Corporate Governance and Restructuring
+- [About](https://abhinashgiri.com/#about): About the firm, its values and the professional background of the founder
+- [Contact](https://abhinashgiri.com/#contact): Contact details
+- [Careers](https://abhinashgiri.com/#careers): Opportunities, internships and applications
+
+## Optional
+
+- [Sitemap](https://abhinashgiri.com/sitemap.xml)
